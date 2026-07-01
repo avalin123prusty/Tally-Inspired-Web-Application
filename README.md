@@ -23,3 +23,37 @@ This project is being built day by day with the following milestones:
 2. Start the server with `npm start`
 3. Open `http://localhost:3000`
 4. Optional PostgreSQL container: `docker compose up -d`
+
+## Deployment
+
+This project can be deployed using Docker or a Node.js host.
+
+### Deploy with Docker
+
+1. Build the container:
+   ```bash
+   docker build -t tally-app .
+   ```
+2. Run the container:
+   ```bash
+   docker run -p 3000:3000 --env JWT_SECRET=super-secret-tally-key tally-app
+   ```
+
+### Deploy with Render
+
+1. Create a new Web Service on Render.
+2. Connect your GitHub repository: `avalin123prusty/Tally-Inspired-Web-Application`.
+3. Set the build command to:
+   ```bash
+   npm install
+   ```
+4. Set the start command to:
+   ```bash
+   npm start
+   ```
+5. Add the environment variable `JWT_SECRET`.
+
+### GitHub Actions
+
+A GitHub Actions workflow is provided at `.github/workflows/deploy.yml`.
+It installs dependencies and prepares the repository for deployment on pushes to `main`.
