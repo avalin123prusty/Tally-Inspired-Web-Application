@@ -1,0 +1,26 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, Segoe UI, sans-serif;
+  background: #08111f;
+  color: #e2e8f0;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: linear-gradient(135deg, #08111f, #0f172a); min-height: 100vh; }
+.app-shell { display: grid; grid-template-columns: 280px 1fr; min-height: 100vh; }
+.sidebar { padding: 1.5rem; background: rgba(6, 10, 20, 0.85); border-right: 1px solid rgba(255,255,255,0.08); }
+.sidebar h1 { margin-bottom: 0.25rem; }
+.sidebar p { color: #94a3b8; }
+nav { display: grid; gap: 0.5rem; margin-top: 1rem; }
+.nav-btn { background: #111827; color: #f8fafc; border: 1px solid #334155; padding: 0.7rem 0.85rem; border-radius: 8px; cursor: pointer; text-align: left; }
+.nav-btn.active { background: #2563eb; border-color: #3b82f6; }
+.content { padding: 1.5rem; overflow: auto; }
+.view { display: none; }
+.view.active { display: block; }
+.stack { display: grid; gap: 0.65rem; margin-bottom: 1rem; }
+input, button { padding: 0.75rem; border-radius: 8px; border: 1px solid #334155; font: inherit; }
+button { background: #2563eb; color: #fff; cursor: pointer; }
+.summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
+.card, .item { background: rgba(15,23,42,0.82); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1rem; }
+.list-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.auth-panel { margin-top: 1.5rem; display: grid; gap: 0.8rem; }
+#auth-status { color: #86efac; }

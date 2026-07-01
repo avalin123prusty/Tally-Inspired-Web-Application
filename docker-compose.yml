@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  postgres:
+    image: postgres:16
+    container_name: tally-postgres
+    environment:
+      POSTGRES_DB: tallydb
+      POSTGRES_USER: tally
+      POSTGRES_PASSWORD: tallypass
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
